@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'sign_in_screen.dart';  // Import SignInScreen
+import 'sign_up_screen.dart';  // Import SignUpScreen
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -16,13 +18,17 @@ class WelcomeScreen extends StatelessWidget {
             // Tombol Sign In
             ElevatedButton(
               onPressed: () {
-                // Aksi tombol Sign In
+                // Navigasi ke SignInScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                );
               },
               child: Text('Sign In'),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 textStyle: TextStyle(fontSize: 18),
-                backgroundColor: Colors.blue, // Menggunakan backgroundColor
+                backgroundColor: Colors.blue,
               ),
             ),
 
@@ -31,13 +37,17 @@ class WelcomeScreen extends StatelessWidget {
             // Tombol Sign Up
             ElevatedButton(
               onPressed: () {
-                // Aksi tombol Sign Up
+                // Navigasi ke SignUpScreen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpScreen()),
+                );
               },
               child: Text('Sign Up'),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 textStyle: TextStyle(fontSize: 18),
-                backgroundColor: Colors.green, // Menggunakan backgroundColor
+                backgroundColor: Colors.green,
               ),
             ),
           ],
