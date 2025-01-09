@@ -24,7 +24,12 @@ flutter:
   # Menambahkan aset
   assets:
     - assets/logo.jpg
+    - assets/wahida.jpg
+    - assets/prasasta.jpg
+    - assets/defi.jpg
+    - assets/ardhana.jpg
     - assets/ardha.jpg
     - assets/bl.jpg
     - data/users.json
     - data/messages.json
+    - data/notifications.json

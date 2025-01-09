@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
-import 'messages_screen.dart';
-import 'profile_screen.dart';
-import 'notifications_screen.dart';
+import 'messages_screen.dart'; // Pastikan file ini ada
+import 'profile_screen.dart'; // Pastikan file ini ada
+import 'notifications_screen.dart'; // Pastikan file ini ada
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -29,10 +28,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: Text(
+          // Ubah judul berdasarkan tab yang dipilih
+          _selectedIndex == 0
+              ? 'Home'
+              : _selectedIndex == 1
+                  ? 'Messages'
+                  : _selectedIndex == 2
+                      ? 'Profile'
+                      : 'Notifications',
+        ),
         backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false, // Menyembunyikan tombol back
       ),
-      body: _screens[_selectedIndex],
+      body: _screens[_selectedIndex], // Menampilkan halaman yang dipilih
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
@@ -57,6 +66,50 @@ class _DashboardScreenState extends State<DashboardScreen> {
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
+      ),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10.0,
+          mainAxisSpacing: 10.0,
+        ),
+        itemCount: 4,
+        itemBuilder: (context, index) {
+          return Card(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'assets/bl.jpg', // Pastikan gambar ini ada
+                    fit: BoxFit.cover,
+                    height: 120,
+                    width: double.infinity,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Card ${index + 1}',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
