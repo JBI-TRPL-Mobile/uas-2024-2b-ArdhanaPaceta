@@ -5,7 +5,7 @@
     "receiverId": "User2",
     "content": "Ini adalah pesan pertama.",
     "timestamp": "2025-01-09T12:34:56.000Z",
-    "imageUrl": "assets/images/ardhana.jpg"
+    "imageUrl": "assets/ardhana.jpg"
   },
   {
     "id": "2",
@@ -13,7 +13,7 @@
     "receiverId": "User3",
     "content": "P Share Loc.",
     "timestamp": "2025-01-09T12:34:56.000Z",
-    "imageUrl": "assets/images/prasasta.jpg"
+    "imageUrl": "assets/prasasta.jpg"
   },
   {
     "id": "3",
@@ -21,7 +21,7 @@
     "receiverId": "User4",
     "content": "Gas Muncak.",
     "timestamp": "2025-01-09T12:34:56.000Z",
-    "imageUrl": "assets/images/wahida.jpg"
+    "imageUrl": "assets/wahida.jpg"
   },
   {
     "id": "4",
@@ -29,6 +29,6 @@
     "receiverId": "User5",
     "content": "Asssalamualaikum.",
     "timestamp": "2025-01-09T12:34:56.000Z",
-    "imageUrl": "assets/images/defi.jpg"
+    "imageUrl": "assets/defi.jpg"
   }
 ]
