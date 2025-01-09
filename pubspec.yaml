@@ -1,4 +1,4 @@
-name: template_project
+name: Mobile
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.8
+  path_provider: ^2.0.15 # Pastikan indentasi di sini benar
 
 dev_dependencies:
   flutter_test:
@@ -24,3 +24,7 @@ flutter:
   # Menambahkan aset
   assets:
     - assets/logo.jpg
+    - assets/ardha.jpg
+    - assets/bl.jpg
+    - data/users.json
+    - data/messages.json
